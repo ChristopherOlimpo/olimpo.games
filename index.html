@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>2048</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <main class="app">
+        <div class="brand-wrap">
+            <a class="brand" href="#" aria-label="Olimpo">Olimpo</a>
+        </div>
+        <header class="header">
+            <h1 class="title">2048</h1>
+            <div class="scores">
+                <div class="score-box">
+                    <span class="score-label">Score</span>
+                    <span class="score-value" id="score">0</span>
+                </div>
+                <div class="score-box">
+                    <span class="score-label">Best</span>
+                    <span class="score-value" id="best">0</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="bar">
+            <p class="intro">Join the tiles to reach <strong>2048</strong>!</p>
+            <div class="buttons">
+                <button class="btn" id="undo" title="Undo (Z)">Undo</button>
+                <button class="btn btn-primary" id="restart">New Game</button>
+            </div>
+        </section>
+
+        <section class="board-wrap">
+            <div class="board" id="board" tabindex="0" aria-label="2048 board">
+                <div class="grid" id="grid"></div>
+                <div class="tiles" id="tiles"></div>
+                <div class="overlay" id="overlay" hidden>
+                    <div class="overlay-inner">
+                        <h2 id="overlay-title">You win!</h2>
+                        <p id="overlay-sub">You reached 2048.</p>
+                        <div class="overlay-actions">
+                            <button class="btn" id="keep-going" hidden>Keep going</button>
+                            <button class="btn btn-primary" id="try-again">Try again</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Use <kbd>&larr;</kbd> <kbd>&uarr;</kbd> <kbd>&darr;</kbd> <kbd>&rarr;</kbd> or swipe. <kbd>Z</kbd> to undo, <kbd>R</kbd> to restart.</p>
+        </footer>
+    </main>
+
+    <script src="game.js"></script>
+</body>
+</html>
